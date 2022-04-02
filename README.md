@@ -1,2 +1,3 @@
-# daim-ui
-Vue component library styled withUno css
+# Daim UI
+
+Vue component library styled with Uno css
