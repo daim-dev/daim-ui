@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/daim-dev/daim-ui/issues"
   },
-  "homepage": "https://github.com/daim-dev/daim-ui#readme"
+  "homepage": "https://github.com/daim-dev/daim-ui#readme",
+  "peerDependencies": {
+    "vue": "^3.2.21"
+  },
+  "devDependencies": {
+    "rollup": "^2.70.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-vue": "^6.0.0"
+  }
 }
