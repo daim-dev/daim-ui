@@ -1,0 +1,27 @@
+
+name: Release
+on:
+    push:
+        branches:
+            - main
+jobs:
+    release:
+        name: Release
+        runs-on: ubuntu-18.04
+        steps:
+            - name: Checkout 🛎
+              uses: actions/checkout@v2.3.5
+              with:
+                  fetch-depth: 0
+                  persist-credentials: false
+
+            - name: Setup Node.js 🏗
+              uses: actions/setup-node@v2.4.1
+              with:
+                  node-version: 16
+                  cache: npm
+
+            - name: Release 🚀
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npx -p @semantic-release/changelog@5 -p @semantic-release/git@9 -p semantic-release@17 semantic-release
