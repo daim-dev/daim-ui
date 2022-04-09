@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/daim-dev/daim-ui/compare/v1.0.0...v1.0.1) (2022-04-09)
+
+
+### Bug Fixes
+
+* **ts config:** disable no implict any and this ([6215f91](https://github.com/daim-dev/daim-ui/commit/6215f91a35ae85f43513565765f25c3f7a111fca))
+
 # 1.0.0 (2022-04-09)
 
 
