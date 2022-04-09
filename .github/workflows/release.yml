@@ -7,8 +7,6 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-18.04
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v2.3.5
@@ -33,8 +31,6 @@ jobs:
 
       - name: Release 🚀
         env:
-          GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN}}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
-          NPM_GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx -p @semantic-release/changelog@5 -p @semantic-release/git@9 -p semantic-release@17 semantic-release
