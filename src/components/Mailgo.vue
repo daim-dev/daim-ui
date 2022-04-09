@@ -1,5 +1,5 @@
 <template>
-  <button
+  <Button
     target="_blank"
     :href="url"
     rel="noopener"
@@ -13,7 +13,7 @@
       <span style="display: none">.localhost</span>
       <span v-if="tel" itemprop="telephone">{{ tel }}</span>
     </slot>
-  </button>
+  </Button>
 </template>
 
 <script>

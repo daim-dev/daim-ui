@@ -26,19 +26,28 @@ export default defineComponent({
     },
     size: {
       type: String,
+      default: 'md',
       validator(value: string) {
-        return ['small', 'medium', 'large'].includes(value)
+        return ['sm', 'md', 'lg'].includes(value)
       },
     },
+    rounded: { type: Boolean, default: true },
     dark: { type: Boolean, default: false },
   },
   computed: {
     classes(): object {
       return {
-        [`btn-${this.variant}`]: this.variant,
-        // 'text-white': !this.dark,
+        'btn-primary': this.variant === 'primary',
+        'btn-secondary': this.variant === 'secondary',
+        'btn-sm': this.size === 'sm',
+        'btn-md': this.size === 'md',
+        'btn-lg': this.size === 'lg',
+
+        'text-white': !this.dark,
         'text-gray-700': this.dark,
         block: this.block,
+        rounded: this.rounded,
+        'rounded-lg': this.rounded,
       }
     },
   },
