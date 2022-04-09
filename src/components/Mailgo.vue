@@ -6,7 +6,11 @@
     :data-address="address"
     :data-domain="domain"
     :data-tel="tel"
+    :variant="variant"
+    :size="size"
+    v-bind="$attrs"
   >
+    <span v-if="_icon" :class="_icon"></span>&nbsp;
     <slot>
       <span style="display: none">info.</span>
       <span v-if="address && domain" itemprop="email">{{ stripped }}</span>
@@ -21,18 +25,20 @@
 // import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import mailgo from 'mailgo'
 import { defineComponent } from 'vue-demi'
+import Button from './Button.vue'
 export default defineComponent({
+  extends: Button,
   props: {
-    href: { type: String, required: true },
+    href: { type: String, required: true, default: '' },
     icon: { type: [String, Object], default: null },
     noIcon: { type: Boolean, defulat: undefined },
   },
   computed: {
-    // _icon() {
-    //   if (this.noIcon) return
-    //   if (this.icon) return this.icon
-    //   return this.isTel ? faPhone : faEnvelope
-    // },
+    _icon() {
+      if (this.noIcon) return
+      if (this.icon) return this.icon
+      return this.isTel ? 'i-fa6-solid-phone' : 'i-fa6-solid-envelope'
+    },
     stripped() {
       return this.href.replace(/^mailto:/, '').replace(/^tel:/, '')
     },

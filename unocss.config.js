@@ -1,3 +1,6 @@
+import { presetUno } from 'unocss'
+const presetIcons = require('@unocss/preset-icons')
+
 module.exports = {
   shortcuts: [
     {
@@ -32,4 +35,14 @@ module.exports = {
       secondary: '#6c757d',
     },
   },
+  presets: [
+    presetUno(),
+    presetIcons.default({
+      prefix: 'i-',
+      extraProperties: {
+        display: 'inline-block',
+        'vertical-align': 'middle',
+      },
+    }),
+  ],
 }
