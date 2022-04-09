@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/daim-dev/daim-ui/compare/v1.0.1...v1.1.0) (2022-04-09)
+
+
+### Bug Fixes
+
+* **mailgo:** remove process.client ([9df3f03](https://github.com/daim-dev/daim-ui/commit/9df3f0346e597e9def510f9904d62fb879ff8ad6))
+
+
+### Features
+
+* **components:** mailgo ([ba85166](https://github.com/daim-dev/daim-ui/commit/ba8516626890b6144bfc52c319b0b39975276970))
+
 ## [1.0.1](https://github.com/daim-dev/daim-ui/compare/v1.0.0...v1.0.1) (2022-04-09)
 
 
