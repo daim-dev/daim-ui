@@ -8,18 +8,18 @@
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": [
-      "@types/node",
-    ],
+    "types": ["@types/node"],
     "paths": {
       "~/*": ["./src/*"],
       "@/*": ["./src/*"],
       "~~/*": ["./src/*"],
       "@@/*": ["./src/*"]
     },
+    "noImplicitAny": false,
+    "noImplicitThis": false,
     "noUnusedLocals": true,
     "checkJs": true,
     "allowJs": true
