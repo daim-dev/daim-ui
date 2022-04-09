@@ -1,31 +1,37 @@
-const { resolve, join } = require('path')
-export default function (moduleOptions) {
-  // get all options for the module
-  const options = {
-    ...moduleOptions,
-    ...this.options.daim,
-  }
+import { join } from 'path'
+import {
+  defineNuxtModule,
+  addPluginTemplate,
+  extendViteConfig,
+} from '@nuxt/kit'
+import VitePlugin from '@unocss/vite'
 
-  this.nuxt.hook('components:dirs', (dirs) => {
-    // Add ./components dir to the list
-    dirs.push({
-      path: join(__dirname, 'components'),
-      prefix: 'd',
+export default defineNuxtModule({
+  meta: {
+    name: 'daim-ui',
+    configKey: 'daim',
+  },
+  hooks: {
+    'components:dirs'(dirs) {
+      // Add ./components dir to the list
+      dirs.push({
+        path: join(__dirname, 'components'),
+        prefix: 'daim',
+      })
+    },
+  },
+  setup(moduleOptions, nuxt) {
+    addPluginTemplate({
+      filename: 'unocss.mjs',
+      getContents: () => {
+        const lines = ["import 'uno.css'", 'export default () => {};']
+        lines.unshift("import '@unocss/reset/tailwind.css'")
+        return lines.join('\n')
+      },
     })
-  })
-
-  // expose the namespace / set a default
-  if (!options.namespace) options.namespace = 'daim'
-  const { namespace } = options
-
-  // add all of the initial plugins
-  const pluginsToSync = ['components/index.js']
-  for (const pathString of pluginsToSync) {
-    this.addPlugin({
-      src: resolve(__dirname, pathString),
-      fileName: join(namespace, pathString),
-      options,
+    extendViteConfig((config) => {
+      config.plugins = config.plugins || []
+      config.plugins.unshift(...VitePlugin(moduleOptions))
     })
-  }
-}
-module.exports.meta = require('../package.json')
+  },
+})

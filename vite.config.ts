@@ -20,12 +20,12 @@ export default defineConfig({
     lib: {
       formats: ['es', 'cjs', 'umd', 'iife'],
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'ca',
+      name: 'daim',
       fileName: (format: string) => `daim-ui.${format}.js`,
     },
     // ssr: true,
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'uno.css'],
       output: {
         // Provide global variables to use in the UMD build
         // Add external deps here
