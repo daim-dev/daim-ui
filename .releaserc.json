@@ -1,27 +1,16 @@
 {
-  "branches": ["main"],
+  "branches": [
+    "main"
+  ],
   "generateNotes": {
     "preset": "angular"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    [
-      "@semantic-release/changelog",
-      {
-        "changelogTitle": "# Releases"
-      }
-    ],
-    [
-      "@semantic-release/git",
-      {
-        "assets": [
-          "package.json",
-          "CHANGELOG.md"
-        ],
-        "message": "chore (release): ${nextRelease.version}\n\n${nextRelease.notes}"
-      }
-    ],
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/git",
     "@semantic-release/github"
   ]
 }

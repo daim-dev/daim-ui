@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
+    }
+  },
+  "checkJs": true,
+  "allowJs": true,
+  "exclude": ["node_modules", ".nuxt", "dist", "dist-temp", ".eslintcache"]
+}

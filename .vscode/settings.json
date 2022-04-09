@@ -1,0 +1,10 @@
+{
+  "eslint.validate": ["vue", "javascript", "javascriptreact"],
+  "editor.formatOnSave": true,
+  "vetur.validation.template": false,
+  "files.exclude": {},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "i18n-ally.localesPaths": ["lang"]
+}

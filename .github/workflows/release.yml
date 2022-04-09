@@ -1,27 +1,40 @@
-
 name: Release
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 jobs:
-    release:
-        name: Release
-        runs-on: ubuntu-18.04
-        steps:
-            - name: Checkout 🛎
-              uses: actions/checkout@v2.3.5
-              with:
-                  fetch-depth: 0
-                  persist-credentials: false
+  release:
+    name: Release
+    runs-on: ubuntu-18.04
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2.3.5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
-            - name: Setup Node.js 🏗
-              uses: actions/setup-node@v2.4.1
-              with:
-                  node-version: 16
-                  cache: npm
+      - name: Setup Node.js 🏗
+        uses: actions/setup-node@v2.4.1
+        with:
+          node-version: 16
+          cache: npm
 
-            - name: Release 🚀
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: npx -p @semantic-release/changelog@5 -p @semantic-release/git@9 -p semantic-release@17 semantic-release
+      - name: Cache node_modules 📦
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies 👨🏻‍💻
+        run: yarn install
+
+      - name: Release 🚀
+        env:
+          GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+          NPM_GITHUB_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+        run: npx -p @semantic-release/changelog@5 -p @semantic-release/git@9 -p semantic-release@17 semantic-release
