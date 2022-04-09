@@ -135,7 +135,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/types@npm:^1.1.0":
+"@iconify-json/fa6-solid@npm:1.1.3":
+  version: 1.1.3
+  resolution: "@iconify-json/fa6-solid@npm:1.1.3"
+  dependencies:
+    "@iconify/types": ^1.0.12
+  checksum: 4bf05e5a1741a484526798c220ddd3889c75a58a0a4e8e7bd3b14e91bb4fbcb528fa836252a79bfd3c6be60cb22509e3adda128652e1973ada670b5c6c5ef2ea
+  languageName: node
+  linkType: hard
+
+"@iconify/types@npm:^1.0.12, @iconify/types@npm:^1.1.0":
   version: 1.1.0
   resolution: "@iconify/types@npm:1.1.0"
   checksum: beffcdbf14e879ff74e79ac29ea0f4f4874f9df632f1994d97395b3f05cbeebaf10f1abc73cf850dc7444924cd57ed92e0e2ca55bacfe3374eff7542d489fbd0
@@ -1283,6 +1292,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "daim-ui@workspace:."
   dependencies:
+    "@iconify-json/fa6-solid": 1.1.3
     "@nuxtjs/eslint-config": 9.0.0
     "@nuxtjs/eslint-config-typescript": 9.0.0
     "@types/node": 17.0.23
@@ -1296,6 +1306,7 @@ __metadata:
     eslint-plugin-nuxt: 3.2.0
     eslint-plugin-prettier: 4.0.0
     eslint-plugin-vue: 8.5.0
+    mailgo: 0.12.2
     prettier: 2.6.2
     typescript: 4.5.4
     unocss: 0.30.11
@@ -3098,6 +3109,13 @@ __metadata:
   dependencies:
     sourcemap-codec: ^1.4.8
   checksum: 23f21f5734346ddfbabd7b9834e3ecda3521e3e1db81166c1513b45b729489bbed1eafa8cd052c7db7fdc7c68ebc5c03bc00dd5a23697edda15dbecaf8c98397
+  languageName: node
+  linkType: hard
+
+"mailgo@npm:0.12.2":
+  version: 0.12.2
+  resolution: "mailgo@npm:0.12.2"
+  checksum: 5eb21f0964a8c4fd91574f28b9d50c8cbc4302b97340cd582214f08e3603ce3512fd499b78b18d6e988f2207b9c9a469b3883646eff066dddf59e2d6f8423c9f
   languageName: node
   linkType: hard
 

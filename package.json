@@ -49,6 +49,8 @@
     }
   },
   "dependencies": {
+    "@iconify-json/fa6-solid": "1.1.3",
+    "mailgo": "0.12.2",
     "vue-demi": "0.12.5"
   },
   "devDependencies": {
