@@ -1,7 +1,9 @@
 module.exports = {
   shortcuts: [
     {
-      btn: 'py-2 px-4 text-sx shadow-md',
+      btn: 'py-2 px-4 text-sx',
+      'btn-link':
+        'bg-transparent text-blue-600 hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200',
     },
     // dynamic shortcuts
     [

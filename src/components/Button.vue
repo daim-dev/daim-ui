@@ -39,11 +39,12 @@ export default defineComponent({
       return {
         'btn-primary': this.variant === 'primary',
         'btn-secondary': this.variant === 'secondary',
+        'btn-link': this.variant === 'link',
         'btn-sm': this.size === 'sm',
         'btn-md': this.size === 'md',
         'btn-lg': this.size === 'lg',
 
-        'text-white': !this.dark,
+        'text-white': !this.dark && this.variant !== 'link',
         'text-gray-700': this.dark,
         block: this.block,
         rounded: this.rounded,
