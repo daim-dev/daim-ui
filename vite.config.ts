@@ -2,8 +2,7 @@ import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 const path = require('path')
 const { defineConfig } = require('vite')
-// const vue = require('@vitejs/plugin-vue');
-const { createVuePlugin } = require('vite-plugin-vue2')
+const vue = require('@vitejs/plugin-vue')
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -36,7 +35,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    createVuePlugin(),
+    vue(),
     Unocss({
       shortcuts: [
         {
@@ -56,9 +55,6 @@ export default defineConfig({
         ],
       ],
       theme: {
-        fontFamily: {
-          sans: ['Inter var'],
-        },
         colors: {
           primary: 'rgb(52, 106, 227)',
           secondary: 'rgb(108, 117, 125)',

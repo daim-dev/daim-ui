@@ -13,7 +13,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue-demi'
+export default defineComponent({
   name: 'Spinner',
-}
+})
 </script>
