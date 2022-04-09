@@ -1,8 +1,8 @@
 import Unocss from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 const path = require('path')
-const { defineConfig } = require('vite')
-const vue = require('@vitejs/plugin-vue')
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 import unocssConfig from './unocss.config'
 
 // https://vitejs.dev/config/

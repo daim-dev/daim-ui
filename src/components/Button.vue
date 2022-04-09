@@ -23,12 +23,11 @@ export default defineComponent({
     },
     text: {
       type: String,
-      required: true,
     },
     size: {
       type: String,
-      validator: function (value: string) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1
+      validator(value: string) {
+        return ['small', 'medium', 'large'].includes(value)
       },
     },
     dark: { type: Boolean, default: false },
@@ -36,7 +35,7 @@ export default defineComponent({
   computed: {
     classes(): object {
       return {
-        [`btn-${this.variant}`]: true,
+        [`btn-${this.variant}`]: this.variant,
         // 'text-white': !this.dark,
         'text-gray-700': this.dark,
         block: this.block,

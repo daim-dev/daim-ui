@@ -18,8 +18,8 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: 'rgb(52, 106, 227)',
-      secondary: 'rgb(108, 117, 125)',
+      primary: '#346ae3',
+      secondary: '#6c757d',
     },
   },
 }
