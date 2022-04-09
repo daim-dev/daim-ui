@@ -59,9 +59,9 @@ export default defineComponent({
     },
   },
   created() {
-    if (process?.client) {
-      mailgo()
-    }
+    // if (process?.client) {
+    mailgo()
+    // }
   },
 })
 </script>
