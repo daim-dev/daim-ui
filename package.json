@@ -71,6 +71,7 @@
     "@typescript-eslint/parser": "5.18.0",
     "@unocss/reset": "0.30.11",
     "@vitejs/plugin-vue": "2.3.1",
+    "@vue/composition-api": "1.4.9",
     "@vue/eslint-config-standard": "6.1.0",
     "babel-loader": "^8.2.4",
     "eslint": "8.12.0",

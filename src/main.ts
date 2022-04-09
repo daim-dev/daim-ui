@@ -1,5 +1,4 @@
-import { install } from 'vue-demi'
-import { createApp } from 'vue'
+import { install, createApp } from 'vue-demi'
 import '@unocss/reset/tailwind.css' // preflights from tailwind
 import 'uno.css'
 import App from './App.vue'
