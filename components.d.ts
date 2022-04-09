@@ -4,6 +4,8 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Button: typeof import('./src/components/Button.vue')['default']
+    Mailgo: typeof import('./src/components/Mailgo.vue')['default']
     Spinner: typeof import('./src/components/Spinner.vue')['default']
   }
 }
