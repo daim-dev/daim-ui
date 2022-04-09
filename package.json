@@ -1,6 +1,6 @@
 {
   "name": "daim-ui",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Vue component library styled with Uno css",
   "main": "./dist/daim-ui.umd.js",
   "module": "./dist/daim-ui.es.js",

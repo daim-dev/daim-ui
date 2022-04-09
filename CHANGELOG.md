@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/daim-dev/daim-ui/compare/v1.1.0...v1.2.0) (2022-04-09)
+
+
+### Features
+
+* **button:** link variant ([961e1c3](https://github.com/daim-dev/daim-ui/commit/961e1c3dff246db32bcf29bb965244e53a1a4332))
+* **button:** sizes ([b7c586c](https://github.com/daim-dev/daim-ui/commit/b7c586c3440bca2f6c82bf8795eefc9d006a0c7e))
+* **mailgo:** add icon ([430538e](https://github.com/daim-dev/daim-ui/commit/430538e1ca52c21c9ef044adb2033d639e0e5c6d))
+
 # [1.1.0](https://github.com/daim-dev/daim-ui/compare/v1.0.1...v1.1.0) (2022-04-09)
 
 
