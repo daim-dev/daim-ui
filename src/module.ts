@@ -10,6 +10,10 @@ export default defineNuxtModule({
   meta: {
     name: 'daim-ui',
     configKey: 'daim',
+    compatibility: {
+      nuxt: '^3.0.0',
+      bridge: true,
+    },
   },
   hooks: {
     'components:dirs'(dirs) {
