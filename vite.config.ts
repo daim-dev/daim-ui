@@ -25,7 +25,7 @@ export default defineConfig({
     },
     // ssr: true,
     rollupOptions: {
-      external: ['vue', 'uno.css'],
+      external: ['vue'],
       output: {
         // Provide global variables to use in the UMD build
         // Add external deps here
