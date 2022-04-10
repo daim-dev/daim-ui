@@ -8,7 +8,7 @@
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "types": ["@types/node"],
@@ -18,6 +18,7 @@
       "~~/*": ["./src/*"],
       "@@/*": ["./src/*"]
     },
+    "skipLibCheck": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
     "noUnusedLocals": true,
